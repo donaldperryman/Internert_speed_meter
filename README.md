@@ -1,8 +1,8 @@
 # Internert_speed_meter
 
-To get a Git project into your build:
+# To get a Git project into your build:
 
-Step 1. Add the JitPack repository to your build file
+# Step 1. Add the JitPack repository to your build file
 
 Add it in your root build.gradle at the end of repositories:
 
@@ -13,15 +13,15 @@ Add it in your root build.gradle at the end of repositories:
 		}
 	}
   
-Step 2. Add the dependency
+# Step 2. Add the dependency
 
 dependencies {
 	        implementation 'com.github.saifullah-nurani:Internert_speed_meter:1.2'
 	}
   
-Step 3. Intialize 
+# Step 3. Intialize 
 
-InternetSpeedBuilder speedBuilder = new InternetSpeedBuilder(this);
+        InternetSpeedBuilder speedBuilder = new InternetSpeedBuilder(this);
         speedBuilder.setOnInternetSpeedListener(new InternetSpeedBuilder.OnInternetSpeedListener() {
             @Override
             public void onProgressDownloadSpeed(String downloadSpeed, int position) {
