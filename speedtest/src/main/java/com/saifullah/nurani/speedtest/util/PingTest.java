@@ -1,4 +1,4 @@
-package com.speedtest.perryman.util;
+package com.saifullah.nurani.speedtest.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

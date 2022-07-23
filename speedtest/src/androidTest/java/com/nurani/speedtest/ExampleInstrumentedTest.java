@@ -1,4 +1,4 @@
-package com.speedtest.perryman;
+package com.nurani.speedtest;
 
 import android.content.Context;
 

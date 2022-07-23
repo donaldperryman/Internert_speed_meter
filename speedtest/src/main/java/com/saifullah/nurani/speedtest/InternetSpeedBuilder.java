@@ -1,13 +1,13 @@
-package com.speedtest.perryman;
+package com.saifullah.nurani.speedtest;
 
 import android.app.Activity;
 import android.location.Location;
 
 import androidx.annotation.NonNull;
 
-import com.speedtest.perryman.util.DownloadSpeedTest;
-import com.speedtest.perryman.util.PingTest;
-import com.speedtest.perryman.util.UploadSpeedTest;
+import com.saifullah.nurani.speedtest.util.DownloadSpeedTest;
+import com.saifullah.nurani.speedtest.util.PingTest;
+import com.saifullah.nurani.speedtest.util.UploadSpeedTest;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
