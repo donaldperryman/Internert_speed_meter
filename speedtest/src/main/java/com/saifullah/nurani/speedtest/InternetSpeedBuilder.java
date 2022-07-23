@@ -23,8 +23,8 @@ public class InternetSpeedBuilder extends Thread{
     private OnInternetSpeedListener listener;
     Activity context;
 
-    public InternetSpeedBuilder(Activity requireActivity) {
-        this.context = requireActivity;
+    public InternetSpeedBuilder(Activity context) {
+        this.context = context;
         tempBlackList = new HashSet<>();
         getSpeedTestHostsHandler = new SpeedTestHandler();
         getSpeedTestHostsHandler.start();
