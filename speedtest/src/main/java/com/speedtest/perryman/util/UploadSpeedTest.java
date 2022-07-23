@@ -1,4 +1,4 @@
-package com.sn.speedtest.util;
+package com.speedtest.perryman.util;
 
 import java.io.DataOutputStream;
 import java.math.BigDecimal;

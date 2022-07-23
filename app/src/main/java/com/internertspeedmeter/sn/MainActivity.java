@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.sn.speedtest.SpeedTestHandler;
+import com.speedtest.perryman.SpeedTestHandler;
 
 public class MainActivity extends AppCompatActivity {
 

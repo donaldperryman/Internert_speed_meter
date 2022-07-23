@@ -1,4 +1,4 @@
-package com.sn.speedtest;
+package com.speedtest.perryman;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.sn.speedtest", appContext.getPackageName());
+        assertEquals("com.speedtest.perryman.test", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.sn.speedtest;
+package com.speedtest.perryman;
 
 import org.junit.Test;
 
