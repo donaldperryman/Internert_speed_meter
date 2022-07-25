@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
@@ -7,11 +8,10 @@ android {
 
     defaultConfig {
         applicationId "com.internertspeedmeter.sn"
-        minSdk 16
+        minSdk 22
         targetSdk 32
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -36,4 +36,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     implementation project(':speedtest')
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.github.ibrahimsn98:speedometer:1.0.1'
 }

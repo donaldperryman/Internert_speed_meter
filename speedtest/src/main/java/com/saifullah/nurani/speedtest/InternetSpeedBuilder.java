@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
-public class InternetSpeedBuilder extends Thread{
+public class InternetSpeedBuilder extends Thread {
     SpeedTestHandler getSpeedTestHostsHandler = null;
     static int position = 0;
     static int lastPosition = 0;
@@ -139,7 +139,6 @@ public class InternetSpeedBuilder extends Thread{
                         uploadTestStarted = true;
                     }
 
-
 //                    Ping Test
                     if (pingTestFinished) {
                         //Failure
@@ -151,19 +150,20 @@ public class InternetSpeedBuilder extends Thread{
                                 @Override
                                 public void run() {
                                     if (listener != null) {
-                                        listener.onProgressPing(dec.format(pingTest.getAvgRtt()) + " ms");
+                                        listener.onProgressPing(dec.format(pingTest.getAvgRtt()) + " ms", 0);
                                     }
                                 }
                             });
                         }
                     } else {
-                        pingRateList.add(pingTest.getInstantRtt());
-
+                        double rate = pingTest.getInstantRtt();
+                        pingRateList.add(rate);
+                        position = getPositionByRate(rate);
                         context.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 if (listener != null) {
-                                    listener.onProgressPing(dec.format(pingTest.getInstantRtt()) + " ms");
+                                    listener.onProgressPing(dec.format(pingTest.getInstantRtt()) + " ms", position);
                                 }
                             }
                         });
@@ -189,12 +189,10 @@ public class InternetSpeedBuilder extends Thread{
                             }
                         } else {
                             //Calc position
-                            double downloadRate = downloadTest.getFinalDownloadRate();
+                            double downloadRate = downloadTest.getInstantDownloadRate();
                             downloadRateList.add(downloadRate);
                             position = getPositionByRate(downloadRate);
-
                             context.runOnUiThread(new Runnable() {
-
                                 @Override
                                 public void run() {
                                     if (listener != null) {
@@ -277,7 +275,7 @@ public class InternetSpeedBuilder extends Thread{
                 context.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (listener!=null){
+                        if (listener != null) {
                             listener.onCompleted();
                         }
                     }
@@ -312,7 +310,7 @@ public class InternetSpeedBuilder extends Thread{
 
         void onProgressUploadSpeed(String uploadSpeed, int position);
 
-        void onProgressPing(String ping);
+        void onProgressPing(String ping, int position);
 
         void onError(String error);
 
